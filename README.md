@@ -4,6 +4,12 @@ A luxury perfume e-commerce portfolio site built to showcase full-stack web deve
 
 **Live Demo:** https://hshr-parfums-hashir.netlify.app/
 
+## Preview
+
+![Homepage](homepage.png)
+![Product Page](product.png)
+![Checkout](checkout.png)
+
 ## Tech Stack
 
 - **Frontend:** HTML5, CSS3, Vanilla JavaScript
