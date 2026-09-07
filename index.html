@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="Perfume.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Supabase client library, must load before script.js -->
+     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+<div class="portfolio-marquee">
+    <div class="portfolio-marquee-track">
+        <span>PORTFOLIO PROJECT • DESIGNED & DEVELOPED BY HASHIR • NOT A REAL STORE • FOR DEMONSTRATION PURPOSES ONLY&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>PORTFOLIO PROJECT • DESIGNED & DEVELOPED BY HASHIR • NOT A REAL STORE • FOR DEMONSTRATION PURPOSES ONLY&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>PORTFOLIO PROJECT • DESIGNED & DEVELOPED BY HASHIR • NOT A REAL STORE • FOR DEMONSTRATION PURPOSES ONLY&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>PORTFOLIO PROJECT • DESIGNED & DEVELOPED BY HASHIR • NOT A REAL STORE • FOR DEMONSTRATION PURPOSES ONLY&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </div>
+</div>
+    <div class="page-transition-overlay" id="page-transition-overlay"></div>
+    <nav>
+        <div class="nav-top">
+            <div class="nav-logo">
+                <a href="#header">HSHR</a>
+                <span class="nav-logo-sub">PARFUMS</span>
+            </div>
+            <button class="hamburger-btn" id="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-icons">
+                <a href="#" id="user-icon"><i class="bi bi-person"></i></a>
+                <a href="#" id="search-icon"><i class="bi bi-search"></i></a>
+                <a href="#" id="open-cart"><i class="bi bi-bag"></i><span id="cart-dot" class="cart-dot"></span></a>
+            </div>
+        </div>
+        <ul>
+            <li><a href="Perfume.html" onclick="return handleNavClick(event, 'Perfume.html')">Home</a></li>
+            <li><a href="Men.html" onclick="return handleNavClick(event, 'Men.html')">Men</a></li>
+            <li><a href="Women.html" onclick="return handleNavClick(event, 'Women.html')">Women</a></li>
+            <li><a href="Products.html" onclick="return handleNavClick(event, 'Products.html')">All Products</a></li>
+            <li><a href="Contact.html" onclick="return handleNavClick(event, 'Contact.html')">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+<div class="mobile-nav-menu" id="mobile-nav-menu">
+    <button class="mobile-nav-close" id="mobile-nav-close">&times;</button>
+    <ul>
+            <li><a href="Perfume.html" onclick="return handleNavClick(event, 'Perfume.html')">Home</a></li>
+            <li><a href="Men.html" onclick="return handleNavClick(event, 'Men.html')">Men</a></li>
+            <li><a href="Women.html" onclick="return handleNavClick(event, 'Women.html')">Women</a></li>
+            <li><a href="Products.html" onclick="return handleNavClick(event, 'Products.html')">All Products</a></li>
+            <li><a href="Contact.html" onclick="return handleNavClick(event, 'Contact.html')">Contact</a></li>
+        </ul>
+    </div>
+
+    <div id="header">
+        <div class="hero-bg-layer layer-1"></div>
+        <div class="hero-bg-layer layer-2"></div>
+        <div class="container">
+            <div id="search-overlay" class="search-overlay">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="SEARCH FOR..." autocomplete="off">
+                    <div id="search-suggestions" class="suggestions-box"></div>
+                    <span id="close-search">&times;</span>
+                </div>
+            </div>
+            <div class="hero-caption caption-1">
+                <h1>Lecaro</h1>
+                <div class="hero-buttons">
+                    <a href="Product.html?id=805b924c-f2d6-42b8-8052-c01d18bac24b" class="btn">Shop Now</a>
+                </div>
+            </div>
+            <div class="hero-caption caption-2">
+                <h1>Lumière d'Ange</h1>
+                <div class="hero-buttons">
+                    <a href="Product.html?id=79305164-140f-46ee-ad96-a6f36ec04f62" class="btn">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="promo-banners">
+        <div class="promo-single">
+            <img src="Images/banner2.png" alt="Nuvola Rosa & Angelo Eau de Parfum">
+            <div class="promo-single-content">
+                <a href="Twins.html" class="promo-shop-btn">Shop Now</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="mens-perfumes">
+        <div class="container">
+            <h2 class="section-title">FOR MEN</h2>
+            <div class="scroll-wrapper">
+                <button class="scroll-arrow left" onclick="scrollRow('mens-list', -300)">&#10094;</button>
+                <div class="perfume-container" id="mens-list"></div>
+                <button class="scroll-arrow right" onclick="scrollRow('mens-list', 300)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-banner">
+        <img src="Images/banner3.jpg" alt="Our Collection">
+        <div class="section-banner-content">
+            <h2 class="section-banner-title">Our Collection</h2>
+            <a href="#all-products" class="promo-shop-btn">Shop Now</a>
+        </div>
+    </div>
+
+    <div id="womens-perfumes">
+        <div class="container">
+            <h2 class="section-title">FOR WOMEN</h2>
+            <div class="scroll-wrapper">
+                <button class="scroll-arrow left" onclick="scrollRow('womens-list', -300)">&#10094;</button>
+                <div class="perfume-container" id="womens-list"></div>
+                <button class="scroll-arrow right" onclick="scrollRow('womens-list', 300)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="most-popular">
+        <div class="most-popular-img">
+            <img src="Images/Lecarosolo.jpg" alt="Lecaro Eau de Parfum">
+        </div>
+        <div class="most-popular-content">
+            <span class="most-popular-label">Most Popular</span>
+            <h2 class="most-popular-title">Lecaro</h2>
+            <p class="most-popular-desc">A bold, smoky eau de parfum built around dark amber and rich woods, cut with a whisper of spice. Confident, magnetic, and made to linger long after you leave the room.</p>
+            <a href="Product.html?id=805b924c-f2d6-42b8-8052-c01d18bac24b" class="btn2">Shop Now</a>
+        </div>
+    </div>
+
+    <div id="all-products">
+        <div class="container">
+            <h2 class="section-title">All Products</h2>
+            <div class="perfume-container" id="all-list"></div>
+        </div>
+    </div>
+
+    <div id="our-looks">
+        <div class="container looks-container">
+            <h2 class="looks-heading">OUR LOOKS</h2>
+            <div class="looks-content">
+                <div class="looks-hero fade-in">
+                    <img src="Images/CxV.jpg" alt="Cedar Eclipse & Vaniglia Pura">
+                </div>
+                <div class="looks-showcase fade-in">
+                    <div class="looks-img-wrap" id="looks-img-wrap">
+                        <img id="looks-img-default" class="looks-img looks-img-default" src="Images/Boxcedar.png" alt="Cedar Eclipse">
+                        <img id="looks-img-hover" class="looks-img looks-img-hover" src="Images/Cedar.png" alt="Cedar Eclipse">
+                    </div>
+                    <p class="looks-product-name" id="looks-name">Cedar Eclipse</p>
+                    <p class="looks-product-price" id="looks-price">PKR 3599</p>
+                    <div class="looks-rating-row">
+                        <div class="looks-rating" style="--rating: 84%;"></div>
+                        <span class="looks-review-count" id="looks-review-count">98 Reviews</span>
+                    </div>
+                    <a href="Product.html" id="looks-view-btn" class="btn2">VIEW PRODUCT</a>
+                    <div class="looks-dots">
+                        <span class="looks-dot active" data-gender="men"></span>
+                        <span class="looks-dot" data-gender="women"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <div id="testimonials">
+    <div class="container">
+        <h2 class="section-title fade-in">What Our Customers Say</h2>
+    </div>
+    <div class="testimonial-marquee">
+        <div class="testimonial-track">
+            <div class="testimonial-card">
+                <div class="looks-rating" style="--rating: 100%;"></div>
+                <p class="testimonial-text">"Cedar Eclipse lasted the entire day. Compliments non-stop, worth every rupee."</p>
+                <p class="testimonial-name">— Ahmed R.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="looks-rating" style="--rating: 90%;"></div>
+                <p class="testimonial-text">"Vaniglia Pura smells so warm and elegant, my go-to scent now."</p>
+                <p class="testimonial-name">— Sana K.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="looks-rating" style="--rating: 100%;"></div>
+                <p class="testimonial-text">"Packaging felt premium, delivery was fast. Will order again."</p>
+                <p class="testimonial-name">— Bilal M.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="looks-rating" style="--rating: 80%;"></div>
+                <p class="testimonial-text">"Great quality for the price. Lecaro is my favorite so far."</p>
+                <p class="testimonial-name">— Hira S.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="looks-rating" style="--rating: 90%;"></div>
+                <p class="testimonial-text">"Fast delivery and the scent throw is amazing for the price."</p>
+                <p class="testimonial-name">— Zainab A.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="looks-rating" style="--rating: 100%;"></div>
+                <p class="testimonial-text">"Ordered twice already. Angelo is such a unique, confident scent."</p>
+                <p class="testimonial-name">— Usman T.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="looks-rating" style="--rating: 90%;"></div>
+                <p class="testimonial-text">"Nuvola Rosa is so soft and feminine, gets compliments every time."</p>
+                <p class="testimonial-name">— Mahnoor F.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="looks-rating" style="--rating: 100%;"></div>
+                <p class="testimonial-text">"Genuinely impressed by the quality for local pricing. Highly recommend."</p>
+                <p class="testimonial-name">— Danial H.</p>
+            </div>
+            <!-- Duplicate set for seamless infinite loop -->
+            <div class="testimonial-card">
+                <div class="looks-rating" style="--rating: 100%;"></div>
+                <p class="testimonial-text">"Cedar Eclipse lasted the entire day. Compliments non-stop, worth every rupee."</p>
+                <p class="testimonial-name">— Ahmed R.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="looks-rating" style="--rating: 90%;"></div>
+                <p class="testimonial-text">"Vaniglia Pura smells so warm and elegant, my go-to scent now."</p>
+                <p class="testimonial-name">— Sana K.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="looks-rating" style="--rating: 100%;"></div>
+                <p class="testimonial-text">"Packaging felt premium, delivery was fast. Will order again."</p>
+                <p class="testimonial-name">— Bilal M.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="looks-rating" style="--rating: 80%;"></div>
+                <p class="testimonial-text">"Great quality for the price. Lecaro is my favorite so far."</p>
+                <p class="testimonial-name">— Hira S.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="looks-rating" style="--rating: 90%;"></div>
+                <p class="testimonial-text">"Fast delivery and the scent throw is amazing for the price."</p>
+                <p class="testimonial-name">— Zainab A.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="looks-rating" style="--rating: 100%;"></div>
+                <p class="testimonial-text">"Ordered twice already. Angelo is such a unique, confident scent."</p>
+                <p class="testimonial-name">— Usman T.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="looks-rating" style="--rating: 90%;"></div>
+                <p class="testimonial-text">"Nuvola Rosa is so soft and feminine, gets compliments every time."</p>
+                <p class="testimonial-name">— Mahnoor F.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="looks-rating" style="--rating: 100%;"></div>
+                <p class="testimonial-text">"Genuinely impressed by the quality for local pricing. Highly recommend."</p>
+                <p class="testimonial-name">— Danial H.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div id="trust-badges">
+        <div class="container trust-badges-row">
+            <div class="trust-badge">
+                <i class="bi bi-star"></i>
+                <span>TRUSTED BY THOUSANDS</span>
+            </div>
+            <div class="trust-badge">
+                <i class="bi bi-shield-check"></i>
+                <span>ROOTED IN ORIGINALITY</span>
+            </div>
+            <div class="trust-badge">
+                <i class="bi bi-flower1"></i>
+                <span>CRAFTED, NOT COPIED</span>
+            </div>
+            <div class="trust-badge">
+                <i class="bi bi-patch-check"></i>
+                <span>SUPER LONG-LASTING</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="newsletter">
+        <div class="container newsletter-container">
+            <h2 class="newsletter-heading">JOIN HSHR</h2>
+            <form id="newsletter-form" class="newsletter-form">
+                <input type="email" id="newsletter-email" placeholder="E-mail" required>
+                <button type="submit" class="newsletter-btn btn2">SUBSCRIBE</button>
+            </form>
+            <p id="newsletter-msg" class="newsletter-msg"></p>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="container footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">HSHR PARFUMS</h3>
+                    <p>Every HSHR bottle is a small argument for good taste no noise, no filler, just scent worth remembering.</p>
+                    <div class="footer-socials">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href="https://www.instagram.com/heishashir/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>ABOUT</h4>
+                    <a href="#">About Us</a>
+                    <a href="Contact.html" onclick="return handleNavClick(event, 'Contact.html')">Contact Us</a>
+                    <a href="#">Look Book</a>
+                </div>
+                <div class="footer-links footer-links-last">
+                    <h4>CLIENT CARE</h4>
+                    <a href="#">Terms &amp; Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2026 - HSHR PARFUMS</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <span id="close-cart">&times;</span>
+        </div>
+        <div class="cart-body" id="cart-items">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+
+        <p id="cart-limit-msg" class="cart-limit-msg">Cart limit: Only 5 items allowed</p>
+
+        <div class="cart-footer">
+            <button id="cart-checkout-btn" class="cart-checkout-btn">
+                Checkout
+            </button>
+        </div>
+    </div>
+
+    <div id="user-modal" class="auth-modal">
+        <div class="auth-container">
+            <span id="close-auth">&times</span>
+
+            <div class="auth-box" id="login-box">
+                <h2>Welcome Back</h2>
+                <p>Please enter your details to sign in.</p>
+<form id="login-form">
+    <p id="login-error-msg" class="signup-error-msg"></p>
+    <div class="input-group">
+        <input type="email" id="login-email" required placeholder=" ">
+                        <label>Email Address</label>
+                    </div>
+            <div class="input-group">
+                <div class="password-group">
+                    <input type="password" id="login-pass" required placeholder=" ">
+                    <label>Password</label>
+                    <span class="toggle-password" data-target="login-pass">
+                        <i class="bi bi-eye-slash"></i>
+                    </span>
+                </div>
+            </div>
+                    <button type="submit" class="auth-btn">Sign In</button>
+                </form>
+                <div class="auth-divider"><span>OR</span></div>
+                <button type="button" id="google-signin-btn" class="google-btn">
+                    <svg width="18" height="18" viewBox="0 0 48 48">
+                        <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l6-6C34.6 6.5 29.6 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.7-.4-3.5z"/>
+                        <path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 15.7 18.9 13 24 13c3.1 0 5.9 1.2 8 3.1l6-6C34.6 6.5 29.6 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/>
+                        <path fill="#4CAF50" d="M24 44c5.5 0 10.5-2.1 14.3-5.6l-6.6-5.6C29.6 34.9 27 36 24 36c-5.3 0-9.7-3.3-11.3-8l-6.6 5.1C9.6 39.6 16.3 44 24 44z"/>
+                        <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.3-4.2 5.7l6.6 5.6C41.6 36 44 30.5 44 24c0-1.3-.1-2.7-.4-3.5z"/>
+                    </svg>
+                    Continue with Google
+                </button>
+                <p class="switch-text">New here? <span id="to-signup">Create Account</span></p>
+            </div>
+
+            <div class="auth-box" id="signup-box" style="display: none;">
+                <h2>Join Us</h2>
+                <p>Create an account to track your fragrances.</p>
+                    <form id="signup-form">
+                         <p id="signup-error-msg" class="signup-error-msg"></p>
+                            <div class="input-group">
+                                <input type="text" id="signup-name" required placeholder=" ">
+                                <label>Full Name</label>
+                            </div>
+                    <div class="input-group">
+                        <input type="email" id="signup-email" required placeholder=" ">
+                        <label>Email Address</label>
+                    </div>
+                    <div class="input-group">
+                        <div class="password-group">
+                            <input type="password" id="signup-pass" required placeholder=" ">
+                            <label>Password</label>
+                            <span class="toggle-password" data-target="signup-pass">
+                                <i class="bi bi-eye-slash"></i>
+                            </span>
+                        </div>
+                        <div id="password-strength" class="strength-meter"></div>
+                    </div>
+                    <button type="submit" id="signup-btn" class="auth-btn">Create Account</button>
+                </form>
+                <p class="switch-text">Already a member? <span id="to-login">Sign In</span></p>
+            </div>
+        </div>
+    </div>
+
+
+            <div id="page-loader" class="page-loader">
+                <div class="loader-wrapper">
+                    <div class="loader-spinner"></div>
+                </div>
+            </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
