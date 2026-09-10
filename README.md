@@ -1,6 +1,6 @@
 # HSHR Parfums
 
-A luxury perfume e-commerce portfolio site built to showcase full-stack web development and design skills. This is a **portfolio/demo project** — not a real store.
+A luxury perfume e-commerce portfolio site built to showcase full-stack web development and design skills. This is a **portfolio/demo project** not a real store.
 
 **Live Demo:** https://hshr-parfums-hashir.netlify.app/
 
